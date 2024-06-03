@@ -1,6 +1,11 @@
 const { Schema, model } = require('../config/db-connection');
 
 const userSchema = Schema({
+  username:{
+    type: String,
+    required: true,
+    unique: true
+  },
   email: {
     type: String,
     required: true,
@@ -9,9 +14,13 @@ const userSchema = Schema({
   password: {
     type: String,
     required: true,
-    unique: true,
-    min: 5,
+    min: 5
   },
+  type: {
+    type: String,
+    enum: ['author','user'],
+    required: true
+  }
 });
 
 module.exports = model('User', userSchema);
