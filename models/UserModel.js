@@ -21,6 +21,7 @@ const userSchema = Schema({
     enum: ['author','user'],
     required: true
   }
-});
+},
+{ versionKey: false });
 
 module.exports = model('User', userSchema);
