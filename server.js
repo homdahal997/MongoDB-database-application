@@ -8,6 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 // Requiring example router
 const userRouter = require('./routes/usersRoute.js');
+const errorHandler = require('./middleware/error.js');
 
 // Configuring the server to accept and parse JSON data.
 app.use(express.json());
@@ -22,9 +23,7 @@ app.use((req, res, next) => {
 app.use('/api/v1/users', userRouter);
 
 // Error Handling Middlware
-app.use((err, req, res, next) => {
-  res.status(500).send('Something went wrong.');
-});
+app.use(errorHandler);
 
 // Calling the listen function telling the server to listen on port 3000
 app.listen(PORT, () => {

@@ -5,7 +5,7 @@ module.exports = {
   createUser,
 };
 
-async function createUser(req, res) {
+async function createUser(req, res, next) {
   try {
     // Hash the password before saving the user
     const salt = 10;
@@ -22,15 +22,6 @@ async function createUser(req, res) {
 
     res.status(200).json(user);
   } catch (err) {
-    if(err.name === "ValidationError"){
-      const messages = Object.values(err.errors).map(val => val.message)
-      res.status(400).json({ errors: messages });
-    }else if (err.code === 11000) {
-      // Handle duplicate key error- all uniques in schema
-      res.status(400).json({ error: 'Duplicate field value entered' });
-    } else {
-      res.status(500).json({ error: 'Server error' });
-    }
-    
+    next(err)
   }
 }
