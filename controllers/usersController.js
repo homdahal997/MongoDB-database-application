@@ -1,11 +1,13 @@
 const bcrypt = require('bcrypt');
 const User = require('../models/UserModel');
+const { validationResult } = require('express-validator');
 
 module.exports = {
   createUser,
   getUsers,
   getUserById,
   updateUser,
+  deleteUser
 };
 
 async function createUser(req, res, next) {
@@ -52,6 +54,10 @@ async function getUserById(req, res,next) {
 
 // Update a single user by ID
 async function updateUser(req, res,next) {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
   try {
     const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
@@ -60,5 +66,18 @@ async function updateUser(req, res,next) {
     res.status(200).json(updatedUser);
   } catch (err) {
     next(err);
+  }
+}
+
+// Delte a single user by ID
+async function deleteUser(req, res) {
+  try {
+    await User.findByIdAndDelete(req.params.id);
+
+    res.status(200).json({
+      message: 'Successfully Deleted the User',
+    });
+  } catch (err) {
+    res.status(400).send(err);
   }
 }
