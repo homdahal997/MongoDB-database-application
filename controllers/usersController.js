@@ -5,6 +5,7 @@ module.exports = {
   createUser,
   getUsers,
   getUserById,
+  updateUser,
 };
 
 async function createUser(req, res, next) {
@@ -44,6 +45,19 @@ async function getUserById(req, res,next) {
   try {
     const user = await User.findById(req.params.id);
     res.status(200).json(user);
+  } catch (err) {
+    next(err);
+  }
+}
+
+// Update a single user by ID
+async function updateUser(req, res,next) {
+  try {
+    const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+
+    res.status(200).json(updatedUser);
   } catch (err) {
     next(err);
   }
