@@ -8,6 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 // Requiring example router
 const userRouter = require('./routes/usersRoute.js');
+const postRouter = require('./routes/postsRoute.js');
+
 const errorHandler = require('./middleware/error.js');
 
 // Configuring the server to accept and parse JSON data.
@@ -21,6 +23,7 @@ app.use((req, res, next) => {
 
 // Connecting the router to the server
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/posts', postRouter);
 
 // Catch-all route handler
 app.all('*', (req, res) => {

@@ -25,6 +25,7 @@ async function createUser(req, res, next) {
       type: req.body.type
     };
     const user = await User.create(newUser);
+    //await user.save();
 
     res.status(200).json(user);
   } catch (err) {
