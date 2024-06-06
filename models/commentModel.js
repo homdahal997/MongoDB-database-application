@@ -22,4 +22,6 @@ const commentSchema = Schema({
 },
 { versionKey: false });
 
+commentSchema.index({ content: 1 });
+
 module.exports = model('Comment', commentSchema);

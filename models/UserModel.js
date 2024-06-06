@@ -24,4 +24,6 @@ const userSchema = Schema({
 },
 { versionKey: false });
 
+userSchema.index({ email: 1 });
+
 module.exports = model('User', userSchema);

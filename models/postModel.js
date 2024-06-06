@@ -24,4 +24,6 @@ const postSchema = Schema({
 },
 { versionKey: false });
 
+postSchema.index({ title: 1 });
+
 module.exports = model('Post', postSchema);
