@@ -10,31 +10,31 @@ const users = [
     {
         "username": "alice_johnson",
         "email": "alice.johnson@example.com",
-        "password": "securepassword123",
+        "password": "securepassword1",
         "type": "author"
     },
     {
         "username": "bob_smith",
         "email": "bob.smith@example.com",
-        "password": "securepassword123",
+        "password": "securepassword2",
         "type": "user"
     },
     {
         "username": "carol_white",
         "email": "carol.white@example.com",
-        "password": "securepassword123",
+        "password": "securepassword3",
         "type": "author"
     },
     {
         "username": "david_brown",
         "email": "david.brown@example.com",
-        "password": "securepassword123",
+        "password": "securepassword4",
         "type": "user"
     },
     {
         "username": "eve_davis",
         "email": "eve.davis@example.com",
-        "password": "securepassword123",
+        "password": "securepassword5",
         "type": "author"
     }
 ];
@@ -78,31 +78,31 @@ const comments = [
         "post_id": "60c72b319b1e8b001c8e4c0e",
         "author_id": "60c72b2f9b1e8b001c8e4c0d",
         "content": "Great article on JavaScript closures!",
-        "timestamp": "2023-05-01T09:00:00Z"
+        
     },
     {
         "post_id": "60c72b2f9b1e8b001c8e4c0d",
         "author_id": "60c72b319b1e8b001c8e4c0e",
         "content": "Very informative post on CSS Grid.",
-        "timestamp": "2023-05-01T10:00:00Z"
+       
     },
     {
         "post_id": "60c72b2f9b1e8b001c8e4c0d",
         "author_id": "60c72b319b1e8b001c8e4c0e",
         "content": "Thanks for the MongoDB introduction!",
-        "timestamp": "2023-05-02T09:00:00Z"
+       
     },
     {
         "post_id": "60c72b319b1e8b001c8e4c0e",
         "author_id": "60c72b2f9b1e8b001c8e4c0d",
         "content": "Good read on async/await in JavaScript.",
-        "timestamp": "2023-05-02T11:00:00Z"
+        
     },
     {
         "post_id": "60c72b2f9b1e8b001c8e4c0d",
         "author_id": "60c72b319b1e8b001c8e4c0e",
         "content": "I learned a lot about Python generators.",
-        "timestamp": "2023-05-03T12:00:00Z"
+       
     }
 ];
 
