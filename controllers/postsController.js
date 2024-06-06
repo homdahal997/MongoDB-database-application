@@ -2,9 +2,11 @@ const Post = require('../models/postModel')
 
 module.exports = {
     createPost,
+    getPosts,
 };
 
-async function createPost(req, res) {
+// Creaate post 
+async function createPost(req, res, next) {
     try {
 
         const post = new Post(req.body);
@@ -13,6 +15,17 @@ async function createPost(req, res) {
 
         res.status(200).json(post);
     } catch (err) {
-        res.status(400).json(err);
+        next(err);
+    }
+}
+
+// Get posts 
+async function getPosts(req, res) {
+    try {
+        const posts = await Post.find({});
+
+        res.status(200).json(posts);
+    } catch (err) {
+        res.status(400).send(err);
     }
 }
