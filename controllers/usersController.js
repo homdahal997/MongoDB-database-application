@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const User = require('../models/UserModel');
 const { validationResult } = require('express-validator');
+const mongoose = require('mongoose');
 
 module.exports = {
   createUser,
@@ -69,15 +70,31 @@ async function updateUser(req, res,next) {
   }
 }
 
-// Delte a single user by ID
+// Delete a single user by ID
 async function deleteUser(req, res) {
+  const id = req.params.id;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({
+      message: 'Invalid user id',
+    });
+  }
+
   try {
-    await User.findByIdAndDelete(req.params.id);
+    const user = await User.findById(id);
+
+    if (!user) {
+      return res.status(404).json({
+        message: 'User not found',
+      });
+    }
+
+    await User.findByIdAndDelete(id);
 
     res.status(200).json({
-      message: 'Successfully Deleted the User',
+      message: 'Successfully deleted the user',
     });
   } catch (err) {
-    res.status(400).send(err);
+    res.status(500).send(err);
   }
 }
