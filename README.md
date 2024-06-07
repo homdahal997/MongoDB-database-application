@@ -34,10 +34,7 @@ To run this project locally, follow these steps:
 
 - **GET /api/v1/users/:id**
   Retrieves a user by ID.
-   ```json
- 66625503d355481d14a02ae2
-  ```
-  
+  66625503d355481d14a02ae2
 
 - **PUT /api/v1/users/:id**
   Updates a user by ID.
