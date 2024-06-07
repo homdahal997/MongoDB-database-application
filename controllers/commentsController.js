@@ -14,7 +14,7 @@ module.exports = {
 async function createComment(req, res, next) {
     try {
 
-        const comment = new Post(req.body);
+        const comment = new Comment(req.body);
 
         await comment.save();
 
