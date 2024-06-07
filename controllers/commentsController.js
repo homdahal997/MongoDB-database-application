@@ -1,4 +1,4 @@
-const Post = require('../models/commentModel')
+const Comment = require('../models/commentModel')
 const mongoose = require('mongoose');
 
 

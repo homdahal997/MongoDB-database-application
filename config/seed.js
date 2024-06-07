@@ -78,31 +78,31 @@ const comments = [
         "post_id": "60c72b319b1e8b001c8e4c0e",
         "author_id": "60c72b2f9b1e8b001c8e4c0d",
         "content": "Great article on JavaScript closures!",
-        
+
     },
     {
         "post_id": "60c72b2f9b1e8b001c8e4c0d",
         "author_id": "60c72b319b1e8b001c8e4c0e",
         "content": "Very informative post on CSS Grid.",
-       
+
     },
     {
         "post_id": "60c72b2f9b1e8b001c8e4c0d",
         "author_id": "60c72b319b1e8b001c8e4c0e",
         "content": "Thanks for the MongoDB introduction!",
-       
+
     },
     {
         "post_id": "60c72b319b1e8b001c8e4c0e",
         "author_id": "60c72b2f9b1e8b001c8e4c0d",
         "content": "Good read on async/await in JavaScript.",
-        
+
     },
     {
         "post_id": "60c72b2f9b1e8b001c8e4c0d",
         "author_id": "60c72b319b1e8b001c8e4c0e",
         "content": "I learned a lot about Python generators.",
-       
+
     }
 ];
 
