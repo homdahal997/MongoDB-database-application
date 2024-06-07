@@ -32,13 +32,13 @@ To run this project locally, follow these steps:
 
   Retrieves all users.
 
-- **GET /api/v1/users/:id**
-  Retrieves a user by ID.
-  66625503d355481d14a02ae2
+- **GET /api/v1/users/:id** <br>
+  Retrieves a user by ID. <br>
+  66625503d355481d14a02ae2 <br>
 
-- **PUT /api/v1/users/:id**
-  Updates a user by ID.
-  66625503d355481d14a02ae2
+- **PUT /api/v1/users/:id** <br>
+  Updates a user by ID. <br>
+  66625503d355481d14a02ae2 <br>
 
   Sample request body: type allowed only user and author
   ```json
@@ -50,13 +50,13 @@ To run this project locally, follow these steps:
   }
   ```
 
-- **DELETE /api/v1/users/:id**
-  Deletes a user by ID.
-  66625503d355481d14a02ae2
+- **DELETE /api/v1/users/:id** <br>
+  Deletes a user by ID. <br>
+  66625503d355481d14a02ae2 <br>
 
 ### Posts
 
-- **POST /api/v1/posts**
+- **POST /api/v1/posts** <br>
 
   Creates a new post.
 
@@ -69,16 +69,16 @@ To run this project locally, follow these steps:
   }
   ```
 
-- **GET /api/v1/posts**
+- **GET /api/v1/posts** <br>
   Retrieves all posts.
 
-- **GET /api/v1/posts/:id**
-  Retrieves a post by ID.
-  66625504d355481d14a02aeb
+- **GET /api/v1/posts/:id** <br>
+  Retrieves a post by ID. <br>
+  66625504d355481d14a02aeb <br>
 
-- **PUT /api/v1/posts/:id**
-  Updates a post by ID.
-  66625504d355481d14a02aeb
+- **PUT /api/v1/posts/:id** <br>
+  Updates a post by ID. <br>
+  66625504d355481d14a02aeb <br>
 
   Sample request body:
   ```json
@@ -90,9 +90,9 @@ To run this project locally, follow these steps:
   }
   ```
 
-- **DELETE /api/v1/posts/:id**
-  Deletes a post by ID.
-  66625504d355481d14a02aec
+- **DELETE /api/v1/posts/:id** <br>
+  Deletes a post by ID. <br>
+  66625504d355481d14a02aec <br>
 
 ### Comments
 
@@ -109,17 +109,17 @@ To run this project locally, follow these steps:
   }
   ```
 
-- **GET /api/v1/comments**
-  Retrieves all comments.
+- **GET /api/v1/comments** <br>
+  Retrieves all comments. <br>
 
-- **GET /api/v1/comments/:id**
-  Retrieves a comment by ID.
-  66625504d355481d14a02af9
+- **GET /api/v1/comments/:id** <br>
+  Retrieves a comment by ID. <br>
+  66625504d355481d14a02af9 <br>
 
-- **PUT /api/v1/comments/:id**
-  Updates a comment by ID.
-    66625504d355481d14a02af8
-  Sample request body:
+- **PUT /api/v1/comments/:id** <br>
+  Updates a comment by ID. <br>
+    66625504d355481d14a02af8 <br>
+  Sample request body: <br>
   ```json
   {
     "post_id": "60c72b319b1e8b001c8e4c0e", 
@@ -128,6 +128,6 @@ To run this project locally, follow these steps:
   }
   ```
 
-- **DELETE /api/v1/comments/:id**
-  Deletes a comment by ID.
-  66625504d355481d14a02af8
+- **DELETE /api/v1/comments/:id** <br>
+  Deletes a comment by ID. <br>
+  66625504d355481d14a02af8 
